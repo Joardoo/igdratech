@@ -7,13 +7,17 @@
 
 | Herramienta | Modelo | Para qué |
 |---|---|---|
-| Claude Code (app de escritorio de Claude) | Claude Opus 5.5 | Tutor paso a paso: explicar conceptos de Angular y Laravel, comprobar versiones, revisar el código que escribo y proponer mensajes de commit. Redactar la documentación. |
-
+| Claude Code (app de escritorio de Claude) | Claude Opus 5.5 | Escribir el código en pasos pequeños explicándome cada concepto y la sintaxis, comprobar versiones, proponer mensajes de commit y redactar la documentación. |
 | Laravel Boost | (paquete de desarrollo de Laravel) | Da a Claude Code las convenciones de Laravel 13 (`backend/CLAUDE.md`, `backend/.claude/skills/`) y un servidor MCP para consultar la documentación de la versión instalada, la base de datos y los logs. |
 
 ## Criterio de uso
 
-- El código lo escribo yo; la IA explica, revisa y sugiere mejoras.
+- El código lo escribe Claude, pero en pasos pequeños: antes de cada cambio me explica qué va a hacer
+  y por qué, y después la sintaxis de lo que ha escrito. Yo lo leo, lo pruebo en el navegador y hago
+  los commits, de modo que cada commit es un cambio que entiendo y puedo defender.
+- Al principio la regla era que yo escribiera el código siguiendo sus indicaciones. La cambié el
+  segundo día: copiar a mano no me hacía entender más, y lo importante es saber explicar y modificar
+  cada archivo.
 - La documentación (el README y este archivo) la ha redactado Claude a partir de mis indicaciones,
   para ahorrar tiempo escribiendo. Yo la reviso y la corrijo antes de cada commit.
 - Las versiones de Angular, Laravel y Bootstrap se comprobaron en fuentes oficiales (npm, Packagist, documentación), no a partir de la memoria del modelo.
@@ -35,3 +39,15 @@
 **Resultado y criterio:** la IA comprobó las versiones (Laravel 13.40, que pide PHP 8.3 o superior;
 Angular 22.2; Bootstrap 5.3.8) y propuso cómo instalar el entorno y cómo integrar Angular con Laravel.
 Las decisiones finales las tomé yo después de revisar las opciones.
+
+### 2. Cambio en la forma de trabajar (2026-11-06)
+
+**Prompt:**
+
+> No me acaba de convencer la regla de que yo escriba todo el código. Vamos a cambiar de sistema: el
+> código lo escribes tú, pero poco a poco, sin introducir grandes cambios de golpe, explicándome los
+> pasos y la sintaxis para que yo lo entienda. Los commits los seguiré haciendo yo.
+
+**Resultado y criterio:** a partir de aquí la IA escribe el código en cambios pequeños y explicados,
+y yo controlo el ritmo con los commits. Así el historial sigue reflejando pasos que he revisado uno
+a uno.
