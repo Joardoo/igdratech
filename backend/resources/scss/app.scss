@@ -8,6 +8,10 @@ $primary: $igdra-blue;
 $info: $igdra-cyan;
 $dark: $igdra-navy;
 
+// Tipografía: Outfit (la carga @fonts en el layout) y, si no está, la del sistema
+$font-family-sans-serif: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$headings-font-weight: 600;
+
 // La web usa el modo oscuro de Bootstrap (<html data-bs-theme="dark">),
 // así que personalizamos sus variables "-dark".
 $body-bg-dark: $igdra-night;
