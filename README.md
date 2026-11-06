@@ -57,6 +57,19 @@ El instalador también configura [Laravel Boost](https://laravel.com/docs/boost)
 
 ![Proyecto creado](docs/capturas/instalacion/05-laravel-listo.png)
 
+Para arrancarlo en desarrollo:
+
+```powershell
+cd backend
+composer run dev
+```
+
+Este comando levanta a la vez el servidor de PHP, la cola de trabajos y Vite (que recompila el CSS
+y el JS al guardar). Como en mi equipo el puerto 8000 ya estaba ocupado, en el `.env` puse
+`SERVER_PORT=8001` y `APP_URL=http://localhost:8001`.
+
+![Página de bienvenida de Laravel](docs/capturas/instalacion/06-laravel-bienvenida.png)
+
 ## Uso de la IA
 
 Está explicado en [docs/uso-ia.md](docs/uso-ia.md).
