@@ -21,4 +21,5 @@ $link-color-dark: $igdra-cyan;
 @import "bootstrap/scss/bootstrap";
 
 // 4. Nuestros estilos, por partes de la página
+@import "logo";
 @import "header";

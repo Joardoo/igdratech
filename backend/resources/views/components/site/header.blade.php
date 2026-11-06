@@ -10,10 +10,7 @@
 <header class="site-header">
     <nav class="navbar navbar-expand-lg py-3" aria-label="Menú principal">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
-                <img src="{{ asset('images/igdratech-mark-light.png') }}" alt="" width="40" height="40">
-                <span class="brand-wordmark">IGDRA<span>TECH</span></span>
-            </a>
+            <x-site.logo class="navbar-brand" />
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Abrir el menú">

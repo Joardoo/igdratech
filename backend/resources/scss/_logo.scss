@@ -1,0 +1,18 @@
+// Logo de IgdraTech: árbol + nombre (se usa en la cabecera y en el pie)
+
+.brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.brand-wordmark {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: $igdra-text;
+
+    span {
+        color: $igdra-cyan;
+    }
+}
