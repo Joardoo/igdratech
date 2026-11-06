@@ -12,11 +12,13 @@
     @fonts
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <x-site.header />
 
-    <main>
+    <main class="flex-grow-1">
         {{ $slot }}
     </main>
+
+    <x-site.footer />
 </body>
 </html>

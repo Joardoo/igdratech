@@ -1,0 +1,14 @@
+// Pie de página
+
+.site-footer {
+    border-top: 1px solid $igdra-line;
+
+    .footer-link {
+        color: $igdra-muted;
+        text-decoration: none;
+
+        &:hover {
+            color: $igdra-cyan;
+        }
+    }
+}
