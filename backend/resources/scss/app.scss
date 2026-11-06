@@ -1,2 +1,21 @@
-// Bootstrap completo. Los colores de IgdraTech se añadirán antes de esta línea.
+// 1. Colores de IgdraTech (compartidos con Angular)
+@import "../../../shared/scss/brand";
+
+// 2. Le decimos a Bootstrap que use nuestros colores.
+//    Tiene que ir ANTES de importar Bootstrap: sus variables usan !default,
+//    que significa "usa este valor solo si nadie ha definido la variable antes".
+$primary: $igdra-blue;
+$info: $igdra-cyan;
+$dark: $igdra-navy;
+
+// La web usa el modo oscuro de Bootstrap (<html data-bs-theme="dark">),
+// así que personalizamos sus variables "-dark".
+$body-bg-dark: $igdra-night;
+$body-color-dark: $igdra-text;
+$body-secondary-color-dark: $igdra-muted;
+$body-secondary-bg-dark: $igdra-navy;
+$border-color-dark: $igdra-line;
+$link-color-dark: $igdra-cyan;
+
+// 3. Bootstrap completo, ya generado con nuestros colores
 @import "bootstrap/scss/bootstrap";

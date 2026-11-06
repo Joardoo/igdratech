@@ -1,0 +1,17 @@
+// Identidad visual de IgdraTech.
+// Solo contiene variables (no genera CSS), así que se puede importar tanto desde Laravel
+// como desde los componentes de Angular sin duplicar estilos.
+
+// Azules del logo (el árbol va de cian a azul)
+$igdra-blue: #2f6fec;       // color principal: botones, enlaces
+$igdra-blue-deep: #0152e6;  // final del degradado
+$igdra-cyan: #00b7ff;       // inicio del degradado, palabras destacadas
+
+// Tema oscuro de la web
+$igdra-night: #060b18;      // fondo de la página
+$igdra-navy: #0b1730;       // tarjetas y secciones
+$igdra-line: #1c2a45;       // bordes y separadores
+$igdra-text: #e6e9ee;       // texto principal
+$igdra-muted: #8d96a3;      // texto secundario
+
+$igdra-gradient: linear-gradient(135deg, $igdra-cyan, $igdra-blue-deep);
