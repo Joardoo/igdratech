@@ -19,3 +19,6 @@ $link-color-dark: $igdra-cyan;
 
 // 3. Bootstrap completo, ya generado con nuestros colores
 @import "bootstrap/scss/bootstrap";
+
+// 4. Nuestros estilos, por partes de la página
+@import "header";

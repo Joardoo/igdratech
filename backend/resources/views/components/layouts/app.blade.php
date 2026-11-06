@@ -13,6 +13,8 @@
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 </head>
 <body>
+    <x-site.header />
+
     <main>
         {{ $slot }}
     </main>
