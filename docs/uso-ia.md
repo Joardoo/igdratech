@@ -9,6 +9,8 @@
 |---|---|---|
 | Claude Code (app de escritorio de Claude) | Claude Opus 5.5 | Tutor paso a paso: explicar conceptos de Angular y Laravel, comprobar versiones, revisar el código que escribo y proponer mensajes de commit. Redactar la documentación. |
 
+| Laravel Boost | (paquete de desarrollo de Laravel) | Da a Claude Code las convenciones de Laravel 13 (`backend/CLAUDE.md`, `backend/.claude/skills/`) y un servidor MCP para consultar la documentación de la versión instalada, la base de datos y los logs. |
+
 ## Criterio de uso
 
 - El código lo escribo yo; la IA explica, revisa y sugiere mejoras.

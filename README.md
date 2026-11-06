@@ -41,6 +41,22 @@ ng version
 
 ![Versión de Angular CLI](docs/capturas/instalacion/03-angular-cli.png)
 
+## Creación del proyecto
+
+El proyecto de Laravel está en la carpeta `backend/`. Lo creé con el instalador de Laravel,
+sin starter kit y con Blade como frontend:
+
+```powershell
+laravel new backend
+```
+
+![Creación del proyecto con laravel new](docs/capturas/instalacion/04-laravel-new.png)
+
+El instalador también configura [Laravel Boost](https://laravel.com/docs/boost) para Claude Code
+(lo explico en [docs/uso-ia.md](docs/uso-ia.md)).
+
+![Proyecto creado](docs/capturas/instalacion/05-laravel-listo.png)
+
 ## Uso de la IA
 
 Está explicado en [docs/uso-ia.md](docs/uso-ia.md).
