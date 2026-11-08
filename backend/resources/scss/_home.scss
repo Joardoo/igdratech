@@ -1,0 +1,51 @@
+// Portada
+
+// Texto con el degradado del logo (cian → azul)
+.text-gradient {
+    background: $igdra-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+// Botón principal con el degradado del logo
+.btn-gradient {
+    background: $igdra-gradient;
+    border: 0;
+    color: #fff;
+
+    &:hover,
+    &:focus-visible {
+        color: #fff;
+        filter: brightness(1.15);
+    }
+}
+
+// Sección principal: titular + logo grande
+.hero {
+    padding: 5rem 0;
+    // Dos manchas de luz azul sobre el fondo oscuro, como en el diseño
+    background:
+        radial-gradient(circle at 80% 30%, rgba($igdra-cyan, 0.18), transparent 45%),
+        radial-gradient(circle at 10% 90%, rgba($igdra-blue-deep, 0.15), transparent 40%);
+
+    .hero-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-lead {
+        font-size: 1.25rem;
+        color: $igdra-muted;
+        max-width: 34rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-logo {
+        max-width: 340px;
+        // Brillo azul alrededor del árbol
+        filter: drop-shadow(0 0 2rem rgba($igdra-cyan, 0.5));
+    }
+}
