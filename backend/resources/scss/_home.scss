@@ -49,3 +49,18 @@
         filter: drop-shadow(0 0 2rem rgba($igdra-cyan, 0.5));
     }
 }
+
+// Fila de puntos fuertes: tres columnas con icono, título y texto
+.features {
+    .feature-icon {
+        font-size: 3rem;
+        color: $igdra-cyan;
+    }
+
+    // En pantallas medianas o más, una línea vertical separa cada columna de la anterior
+    @include media-breakpoint-up(md) {
+        .feature + .feature {
+            border-left: 1px solid $igdra-line;
+        }
+    }
+}

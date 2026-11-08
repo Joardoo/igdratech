@@ -1,4 +1,13 @@
 <x-layouts.app>
+    @php
+        // Tarjetas de la fila de puntos fuertes: icono de Bootstrap Icons, título y texto
+        $features = [
+            ['icon' => 'bi-kanban', 'title' => 'Gestión', 'text' => 'Inventarios, equipos y licencias organizados en un solo sitio.'],
+            ['icon' => 'bi-lightning-charge', 'title' => 'Automatización', 'text' => 'Escaneos, avisos y copias de seguridad que se hacen solos.'],
+            ['icon' => 'bi-shield-lock', 'title' => 'Privacidad', 'text' => 'Tus datos se quedan en tu equipo, nunca en la nube.'],
+        ];
+    @endphp
+
     <section class="hero">
         <div class="container">
             <div class="row align-items-center g-5">
@@ -24,6 +33,20 @@
                 <div class="col-lg-5 text-center">
                     <img src="{{ asset('images/igdratech-mark-light.png') }}" alt="" class="hero-logo img-fluid">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features py-5">
+        <div class="container">
+            <div class="row g-4">
+                @foreach ($features as $feature)
+                    <div class="col-md-4 feature text-center">
+                        <i class="bi {{ $feature['icon'] }} feature-icon" aria-hidden="true"></i>
+                        <h2 class="h4 mt-3">{{ $feature['title'] }}</h2>
+                        <p class="text-body-secondary mb-0">{{ $feature['text'] }}</p>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
