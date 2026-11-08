@@ -50,4 +50,21 @@
             </div>
         </div>
     </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="cta-card d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-4">
+                <div>
+                    <h2 class="display-6 fw-bold">¿Hablamos?</h2>
+                    <p class="cta-text mb-0">
+                        ¿Necesitas una aplicación para gestionar o automatizar algo en tu empresa?
+                        Cuéntanos tu idea y te ayudamos a hacerla realidad.
+                    </p>
+                </div>
+                <a href="{{ route('contact') }}" class="btn btn-light btn-lg px-4 flex-shrink-0">
+                    <i class="bi bi-envelope me-2" aria-hidden="true"></i>Contactar
+                </a>
+            </div>
+        </div>
+    </section>
 </x-layouts.app>
