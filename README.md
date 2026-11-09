@@ -87,6 +87,12 @@ ng new frontend --style=scss --routing --ssr=false --zoneless --skip-git --packa
 
 ![Creación del proyecto con ng new](docs/capturas/instalacion/07-angular-new.png)
 
+Angular se compila dentro de `backend/public/app` y la página `/productos` de Laravel lo carga.
+Para no tener que abrir otra terminal, registré su modo de vigilancia (`ng build --watch`) en
+`composer run dev`, así que un solo comando arranca el servidor, Vite y Angular:
+
+![composer run dev con el proceso de Angular](docs/capturas/instalacion/08-composer-run-dev.png)
+
 ## Uso de la IA
 
 Está explicado en [docs/uso-ia.md](docs/uso-ia.md).
