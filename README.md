@@ -70,6 +70,23 @@ y el JS al guardar). Como en mi equipo el puerto 8000 ya estaba ocupado, en el `
 
 ![Página de bienvenida de Laravel](docs/capturas/instalacion/06-laravel-bienvenida.png)
 
+El proyecto de Angular está en la carpeta `frontend/`. Lo creé con Angular CLI desde la raíz del
+repositorio:
+
+```powershell
+ng new frontend --style=scss --routing --ssr=false --zoneless --skip-git --package-manager=npm --ai-config=claude-code
+```
+
+- `--style=scss`: estilos en SCSS, como en Laravel, para compartir los colores de la marca.
+- `--routing`: incluye el router de Angular.
+- `--ssr=false`: sin renderizado en el servidor; las páginas las sirve Laravel.
+- `--zoneless`: el modo actual de Angular para detectar cambios, basado en signals.
+- `--skip-git`: para no crear un segundo repositorio dentro de `frontend/`.
+- `--ai-config=claude-code`: genera `frontend/CLAUDE.md` con buenas prácticas de Angular para
+  Claude Code (ver [docs/uso-ia.md](docs/uso-ia.md)).
+
+![Creación del proyecto con ng new](docs/capturas/instalacion/07-angular-new.png)
+
 ## Uso de la IA
 
 Está explicado en [docs/uso-ia.md](docs/uso-ia.md).

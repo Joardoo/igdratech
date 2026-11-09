@@ -9,6 +9,7 @@
 |---|---|---|
 | Claude Code (app de escritorio de Claude) | Claude Opus 5.5 | Escribir el código en pasos pequeños explicándome cada concepto y la sintaxis, comprobar versiones, proponer mensajes de commit y redactar la documentación. |
 | ChatGPT | — | Generar el logo de IgdraTech. Las versiones con fondo transparente para la web las preparó Claude a partir de ese original. |
+| Angular CLI (`--ai-config=claude-code`) | — | Al crear el proyecto Angular genera `frontend/CLAUDE.md` con las buenas prácticas de Angular 22 y un servidor MCP (en modo solo lectura) para consultar su documentación. |
 | Laravel Boost | (paquete de desarrollo de Laravel) | Da a Claude Code las convenciones de Laravel 13 (`backend/CLAUDE.md`, `backend/.claude/skills/`) y un servidor MCP para consultar la documentación de la versión instalada, la base de datos y los logs. |
 
 ## Criterio de uso
