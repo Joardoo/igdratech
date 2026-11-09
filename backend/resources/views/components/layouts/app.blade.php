@@ -11,6 +11,7 @@
 
     @fonts
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+    @stack('styles')
 </head>
 <body class="d-flex flex-column min-vh-100">
     <x-site.header />
@@ -20,5 +21,7 @@
     </main>
 
     <x-site.footer />
+
+    @stack('scripts')
 </body>
 </html>
