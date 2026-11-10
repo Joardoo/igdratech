@@ -1,0 +1,24 @@
+// Colores de IgdraTech: el mismo archivo que usa Laravel (shared/scss/_brand.scss)
+@use 'brand' as *;
+
+.product-logo {
+  object-fit: contain;
+}
+
+.feature-card {
+  height: 100%;
+  padding: 1.25rem;
+  background: $igdra-navy;
+  border: 1px solid $igdra-line;
+  border-radius: 0.75rem;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  color: $igdra-cyan;
+}
+
+.feature-badge {
+  background: rgba($igdra-cyan, 0.12);
+  color: $igdra-cyan;
+}
