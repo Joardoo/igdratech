@@ -1,0 +1,47 @@
+<section class="container py-5">
+  <h1 class="display-5 fw-bold">Productos</h1>
+  <p class="fs-5 text-body-secondary mb-5">
+    Aplicaciones de gestión y automatización para tu empresa.
+  </p>
+
+  @if (products.isLoading()) {
+    <div class="d-flex align-items-center gap-3 text-body-secondary">
+      <div class="spinner-border spinner-border-sm" role="status"></div>
+      Cargando productos…
+    </div>
+  } @else if (products.error()) {
+    <div class="alert alert-danger" role="alert">
+      No se han podido cargar los productos. Inténtalo de nuevo más tarde.
+    </div>
+  } @else {
+    <div class="row g-4">
+      @for (product of products.value(); track product.slug) {
+        <div class="col-md-6 col-lg-4">
+          <article class="product-card">
+            <img [src]="product.logo_url" alt="" width="64" height="64" class="product-logo" />
+            <h2 class="h4 mt-3 mb-1">{{ product.name }}</h2>
+            <p class="text-info mb-3">{{ product.tagline }}</p>
+            <p class="text-body-secondary">{{ product.description }}</p>
+            <p class="small text-body-secondary">
+              <i class="bi bi-list-check me-1" aria-hidden="true"></i>
+              {{ product.features_count }} funcionalidades
+            </p>
+            <a [routerLink]="product.slug" class="btn btn-outline-light rounded-pill px-4 mt-auto align-self-start">
+              Ver detalles
+            </a>
+          </article>
+        </div>
+      }
+
+      <div class="col-md-6 col-lg-4">
+        <article class="product-card product-card--soon">
+          <i class="bi bi-hourglass-split product-soon-icon" aria-hidden="true"></i>
+          <h2 class="h4 mt-3 mb-1">Más aplicaciones en camino</h2>
+          <p class="text-body-secondary mb-0">
+            Estamos trabajando en nuevas herramientas de gestión y automatización.
+          </p>
+        </article>
+      </div>
+    </div>
+  }
+</section>

@@ -1,0 +1,40 @@
+// Colores de IgdraTech: el mismo archivo que usa Laravel (shared/scss/_brand.scss)
+@use 'brand' as *;
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  background: $igdra-navy;
+  border: 1px solid $igdra-line;
+  border-radius: 1rem;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+
+  &:hover {
+    border-color: $igdra-cyan;
+    transform: translateY(-4px);
+  }
+}
+
+// Tarjeta de "Más aplicaciones en camino": sin fondo y con borde discontinuo
+.product-card--soon {
+  justify-content: center;
+  background: transparent;
+  border-style: dashed;
+
+  &:hover {
+    transform: none;
+  }
+}
+
+.product-logo {
+  object-fit: contain;
+}
+
+.product-soon-icon {
+  font-size: 2.5rem;
+  color: $igdra-muted;
+}
