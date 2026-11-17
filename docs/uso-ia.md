@@ -1,16 +1,19 @@
 # Declaración del uso de la IA
 
-> Borrador de trabajo: se irá completando durante el desarrollo y se resumirá para la entrega
-> (herramientas, para qué y 2-3 prompts representativos).
-
 ## Herramientas
 
 | Herramienta | Modelo | Para qué |
 |---|---|---|
 | Claude Code (app de escritorio de Claude) | Claude Opus 5.5 | Escribir el código en pasos pequeños explicándome cada concepto y la sintaxis, comprobar versiones, proponer mensajes de commit y redactar la documentación. |
 | ChatGPT | — | Generar el logo de IgdraTech. Las versiones con fondo transparente para la web las preparó Claude a partir de ese original. |
-| Angular CLI (`--ai-config=claude-code`) | — | Al crear el proyecto Angular genera `frontend/CLAUDE.md` con las buenas prácticas de Angular 22 y un servidor MCP (en modo solo lectura) para consultar su documentación. |
-| Laravel Boost | (paquete de desarrollo de Laravel) | Da a Claude Code las convenciones de Laravel 13 (`backend/CLAUDE.md`, `backend/.claude/skills/`) y un servidor MCP para consultar la documentación de la versión instalada, la base de datos y los logs. |
+| Angular CLI (`--ai-config=claude-code`) | — | Al crear el proyecto Angular generó `frontend/CLAUDE.md` con las buenas prácticas de Angular 22, que Claude Code carga cuando trabaja con los archivos de `frontend/`. |
+| Laravel Boost | (paquete de desarrollo de Laravel) | Generó `backend/CLAUDE.md` con las convenciones de Laravel 13, que Claude Code carga cuando trabaja con los archivos de `backend/`. |
+
+Angular CLI y Laravel Boost también configuran un servidor MCP (en `frontend/.mcp.json` y
+`backend/.mcp.json`) para que Claude Code consulte la documentación de la versión instalada y, en el
+caso de Boost, también la base de datos y los logs. No llegaron a usarse: Claude Code solo lee el
+`.mcp.json` de la carpeta en la que se abre, y yo lo abría siempre en la raíz del repositorio. Por
+el mismo motivo tampoco se usaron las skills que Boost instala en `backend/.claude/skills/`.
 
 ## Criterio de uso
 
